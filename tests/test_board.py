@@ -1,6 +1,6 @@
 import unittest
 
-from othello.board import Board, BLACK, WHITE, EMPTY
+from src.board import Board, BLACK, WHITE, EMPTY
 
 
 class TestBoard(unittest.TestCase):
