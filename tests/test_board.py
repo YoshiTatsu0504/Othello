@@ -35,6 +35,22 @@ class TestBoard(unittest.TestCase):
                 self.board.set(x, y, BLACK)
         self.assertTrue(self.board.is_full())
 
+    def test_get_valid_moves(self):
+        expected_black = {(2, 3), (3, 2), (4, 5), (5, 4)}
+        expected_white = {(2, 4), (3, 5), (4, 2), (5, 3)}
+        self.assertEqual(set(self.board.get_valid_moves(BLACK)), expected_black)
+        self.assertEqual(set(self.board.get_valid_moves(WHITE)), expected_white)
+
+    def test_copy_produces_deep_copy(self):
+        board_copy = self.board.copy()
+        self.assertIsNot(board_copy.grid, self.board.grid)
+        for y in range(8):
+            self.assertIsNot(board_copy.grid[y], self.board.grid[y])
+        # modify the copy and ensure original is unaffected
+        board_copy.apply_move(BLACK, 2, 3)
+        self.assertEqual(board_copy.get(2, 3), BLACK)
+        self.assertIs(self.board.get(2, 3), EMPTY)
+
 
 if __name__ == '__main__':
     unittest.main()
