@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: src.gui をモジュールとして実行",
+      "type": "python",
+      "request": "launch",
+      "module": "src.gui",  // ← 相対パスでなくモジュールとして実行
+      "justMyCode": true
+    }
+  ]
+}
