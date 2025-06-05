@@ -1,6 +1,6 @@
 import unittest
 
-from src.board import Board, BLACK, WHITE, EMPTY
+from src.board import Board, BLACK, WHITE
 
 
 class TestBoard(unittest.TestCase):

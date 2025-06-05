@@ -1,7 +1,7 @@
 import random
 from typing import Tuple, Optional
 
-from .board import Board, BLACK, WHITE
+from .board import Board
 
 
 def random_move(board: Board, color: str) -> Optional[Tuple[int, int]]:
