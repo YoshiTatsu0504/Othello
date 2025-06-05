@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox
-from typing import Optional
 
 from .board import Board, BLACK, WHITE, EMPTY, BOARD_SIZE
 from .ai import choose_move
