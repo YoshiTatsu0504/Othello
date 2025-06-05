@@ -11,7 +11,7 @@ A simple Othello/Reversi game with a Tkinter GUI and basic AI opponent.
 Run the game with:
 
 ```bash
-python -m othello.gui
+python -m src.gui
 ```
 
 ## Running Tests
