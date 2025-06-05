@@ -8,7 +8,6 @@ class TestBoard(unittest.TestCase):
         self.board = Board()
 
     def test_initial_setup(self):
-        mid = 4 // 2  # not used
         black = self.board.count(BLACK)
         white = self.board.count(WHITE)
         self.assertEqual(black, 2)
